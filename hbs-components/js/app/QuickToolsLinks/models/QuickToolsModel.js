@@ -140,6 +140,7 @@ define( [
     // ---------------------        
     var CreditCardActionModel = Backbone.Model.extend( {
         initialize: function ( options ) {
+            props = {};
             props.secureHost = "";
             this.updateQuickToolsLinks( this.get( 'ccData' ) );
             this.set( {
