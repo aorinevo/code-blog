@@ -11,9 +11,11 @@
   "dependencies": {
     "backbone": "^1.3.3",
     "backbone.marionette": "file:node_modules/backbone.marionette",
+    "handlebars": "^4.0.6",
     "jquery": "^3.1.1",
     "marionette": "0.0.0",
     "requirejs": "^2.3.2",
+    "text": "github:requirejs/text",
     "underscore": "^1.8.3"
   }
 }

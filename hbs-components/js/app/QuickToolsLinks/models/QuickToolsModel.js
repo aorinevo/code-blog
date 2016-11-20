@@ -153,17 +153,17 @@ define( [
         // model attributes.
         updateQuickToolsLinks: function ( ccData ) {
             var dataActions = [];
-            if ( ccData.cardId ) {
-                setPropertyForAllQuickToolsLinks( "dataParams", "{&quot;CID&quot;: &quot;" + ccData.cardId + "&quot;}" );
-            }
-            if ( props.creditAuthUserEnabled ) {
-                dataActions = [ "addAuthorizedUser", "lostCard", "increaseLimit" ];
-                if ( ccData.authorizedUser ) {
-                    setVisibilityOfQuickToolsLinks( dataActions, [ false, false, false ] );
-                } else if ( ccData.primaryUser || ccData.secondaryUser ) {
-                    setVisibilityOfQuickToolsLinks( dataActions, [ true, true, true ] );
-                }
-            }
+            // if ( ccData.cardId ) {
+            //     setPropertyForAllQuickToolsLinks( "dataParams", "{&quot;CID&quot;: &quot;" + ccData.cardId + "&quot;}" );
+            // }
+            // if ( props.creditAuthUserEnabled ) {
+            //     dataActions = [ "addAuthorizedUser", "lostCard", "increaseLimit" ];
+            //     if ( ccData.authorizedUser ) {
+            //         setVisibilityOfQuickToolsLinks( dataActions, [ false, false, false ] );
+            //     } else if ( ccData.primaryUser || ccData.secondaryUser ) {
+            //         setVisibilityOfQuickToolsLinks( dataActions, [ true, true, true ] );
+            //     }
+            // }
             this.set(
                 $.extend( {}, ccData, {
                     ccData: ccData,

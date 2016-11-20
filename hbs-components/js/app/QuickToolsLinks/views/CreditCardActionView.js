@@ -5,25 +5,27 @@
 //> Create Date: <April 13, 2015>
 //>
 //======================== */
+
+//Note 3.x replaces ItemView and LayoutView with View!!!!
 define(
     [
         'jquery',
-        'marionette',                                                
+        'marionette',
+        'text!/templates/Page.hbs',
+        'handlebars'                                              
     ],
-    function ( $, Marionette ) {
+    function ( $, Marionette, Page, Handlebars ) {
         'use strict';
         var ccActionView;
 
-        ccActionView = Marionette.ItemView.extend( {
-            template: CcActionTpl,
-            el: '#ccAction',            
+        ccActionView = Marionette.View.extend( {
+            template: Handlebars.compile(Page),
+            el: '#ccAction',  
             onRender: function () {
                 this.$el.removeClass( 'displayNone' );
-
-                /*This will create a tooltip for all links inside this class that has the title attribute.*/
-                Tooltip.create( "#csrActionLinks a", {
-                    location: "bottom"
-                } );
+            },
+            initialize: function(options){
+              console.log(this.model);
             },
             modelEvents: {
                 "change": "render"
