@@ -9,12 +9,9 @@
 //Note 3.x replaces ItemView and LayoutView with View!!!!
 define(
 [
-    'jquery',
-    'marionette',
-    'text!templates/Page.hbs',
-    'handlebars'
+  'js/app/Meter/Meter'
 ],
-function ( $, Marionette, Page, Handlebars ) {      
+function ( Meter ) {      
     'use strict';    
     
     function renderQuickTools(){
@@ -26,12 +23,9 @@ function ( $, Marionette, Page, Handlebars ) {
       new CardSelectorView().render(); 
     }
     
-    var PageView = Marionette.View.extend( {
-        template: Handlebars.compile(Page),
-        el: '#page-view',  
-        onRender: function () { 
-        }
-    } );
-
-    return PageView;
+    return {
+      renderMeter: function( config ){
+        return new Meter( config ).render();
+      }
+    };
 } );
