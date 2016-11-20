@@ -1,11 +1,2 @@
-<div class="column medium-6 {{side}}">
-  <ul>
-    {{#each links}}                    
-      <li>
-        <a href="#" data-action="{{dataAction}}" data-params="{{{dataParams}}}" data-coremetrics="{{dataCoremetrics}}">
-        {{qti18n}}
-        </a>
-      </li>                              
-    {{/each}}
-  </ul>
-</div>
+{{>quickToolsLinks side="left" links=quickToolsLinksLeft}}
+{{>quickToolsLinks side="right" links=quickToolsLinksRight}}

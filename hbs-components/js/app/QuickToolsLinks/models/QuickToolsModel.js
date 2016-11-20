@@ -9,8 +9,9 @@
 define( [
     'backbone',    
     'underscore',
-    'jquery'
-], function ( Backbone, _, $ ) {
+    'jquery',
+    'backbone.radio'
+], function ( Backbone, _, $, Radio ) {
     // Private variables
     // -----------------
     // `dataParamsDefault` is set to a non-empty object so that postBuilder.js makes a an ajax post request.  
@@ -29,7 +30,7 @@ define( [
                 dataAction: "dispute",
                 dataParams: dataParamsDefault,
                 dataCoremetrics: dataCoremetricsPrefix + "dispute_a_transaction",
-                qti18n: qti18nPrefix + "dispute",
+                qti18n: "1) dispute",
                 column: "left",
                 showLink: true
             },
@@ -37,7 +38,7 @@ define( [
                 dataAction: "replaceCard",
                 dataParams: dataParamsDefault,
                 dataCoremetrics: dataCoremetricsPrefix + "order_a_replacement_card",
-                qti18n: qti18nPrefix + "order",
+                qti18n: "2) order",
                 column: "left",
                 showLink: true
             },
@@ -45,7 +46,7 @@ define( [
                 dataAction: "updateBilling",
                 dataParams: dataParamsDefault,
                 dataCoremetrics: dataCoremetricsPrefix + "update_my_billing_info",
-                qti18n: qti18nPrefix + "updateBillInfo",
+                qti18n: "3) updateBillInfo",
                 column: "left",
                 showLink: true
             },
@@ -53,7 +54,7 @@ define( [
                 dataAction: "addAuthorizedUser",
                 dataParams: dataParamsDefault,
                 dataCoremetrics: dataCoremetricsPrefix + "add_an_authorized_user",
-                qti18n: qti18nPrefix + "addAuthorizedUser",
+                qti18n: "4) addAuthorizedUser",
                 column: "left",
                 showLink: false
             },
@@ -61,7 +62,7 @@ define( [
                 dataAction: "lostCard",
                 dataParams: dataParamsDefault,
                 dataCoremetrics: dataCoremetricsPrefix + "report_a_lost_or_stolen_card",
-                qti18n: qti18nPrefix + "report",
+                qti18n: "5) report",
                 column: "right",
                 showLink: true
             },
@@ -69,7 +70,7 @@ define( [
                 dataAction: "creditAlerts",
                 dataParams: dataParamsDefault,
                 dataCoremetrics: dataCoremetricsPrefix + "manage_my_credit_alerts",
-                qti18n: qti18nPrefix + "manageAlerts",
+                qti18n: "6) manageAlerts",
                 column: "right",
                 showLink: true
             },
@@ -77,7 +78,7 @@ define( [
                 dataAction: "estatements",
                 dataParams: dataParamsDefault,
                 dataCoremetrics: dataCoremetricsPrefix + "manage_paperless_settings",
-                qti18n: qti18nPrefix + "managePaperless",
+                qti18n: "7) managePaperless",
                 column: "right",
                 showLink: true
             },
@@ -85,7 +86,7 @@ define( [
                 dataAction: "increaseLimit",
                 dataParams: dataParamsDefault,
                 dataCoremetrics: dataCoremetricsPrefix + "request_a_credit_limit_increase",
-                qti18n: qti18nPrefix + "increaseLimit",
+                qti18n: "8) increaseLimit",
                 column: "right",
                 showLink: false
             }
@@ -141,32 +142,21 @@ define( [
     var CreditCardActionModel = Backbone.Model.extend( {
         initialize: function ( options ) {
             props = {};
-            props.secureHost = "";
-            this.updateQuickToolsLinks( this.get( 'ccData' ) );
+            props.secureHost = "";            
             this.set( {
                 quickToolsLinks: quickToolsLinks,
                 props: props,
                 walletURL: props.secureHost + "/account/wallet?ocwallet=true&cm_sp=creditcardlanding_credit_gateway-_-bloomingdales_credit-_-view_bwallet"
             } );
+            Radio.channel( 'card-selector').on( 'select:changed', this.updateQuickToolsLinks.bind(this));
         },
         // `updateQuickToolsLinks` takes credit card data and updates the `quickToolsLinks` object and sets the quickToolsLinksLeft and quickToolsLinksRight 
         // model attributes.
-        updateQuickToolsLinks: function ( ccData ) {
-            var dataActions = [];
-            // if ( ccData.cardId ) {
-            //     setPropertyForAllQuickToolsLinks( "dataParams", "{&quot;CID&quot;: &quot;" + ccData.cardId + "&quot;}" );
-            // }
-            // if ( props.creditAuthUserEnabled ) {
-            //     dataActions = [ "addAuthorizedUser", "lostCard", "increaseLimit" ];
-            //     if ( ccData.authorizedUser ) {
-            //         setVisibilityOfQuickToolsLinks( dataActions, [ false, false, false ] );
-            //     } else if ( ccData.primaryUser || ccData.secondaryUser ) {
-            //         setVisibilityOfQuickToolsLinks( dataActions, [ true, true, true ] );
-            //     }
-            // }
+        updateQuickToolsLinks: function ( visibilityList ) {            
+            var  dataActions = [ "dispute", "replaceCard", "updateBilling", "addAuthorizedUser", "lostCard", "creditAlerts", "estatements", "increaseLimit" ];
+            setVisibilityOfQuickToolsLinks( dataActions, JSON.parse(visibilityList));
             this.set(
-                $.extend( {}, ccData, {
-                    ccData: ccData,
+                $.extend( {}, {                    
                     quickToolsLinksLeft: getQuickToolsLinks( "column", "left" ),
                     quickToolsLinksRight: getQuickToolsLinks( "column", "right" )
                 } )
