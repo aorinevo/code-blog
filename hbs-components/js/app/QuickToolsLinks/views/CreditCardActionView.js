@@ -11,7 +11,7 @@ define(
     [
         'jquery',
         'marionette',
-        'text!/templates/Page.hbs',
+        'text!templates/Page.hbs',
         'handlebars'                                              
     ],
     function ( $, Marionette, Page, Handlebars ) {

@@ -1,7 +1,7 @@
 define([
-  'app/QuickToolsLinks/views/CreditCardActionView',
-  'app/QuickToolsLinks/models/QuickToolsModel',
-  'app/Helpers'
+  'js/app/QuickToolsLinks/views/CreditCardActionView',
+  'js/app/QuickToolsLinks/models/QuickToolsModel',
+  'js/app/Helpers'
 ], 
 function( CreditCardActionView, QuickToolsModel, Helpers ){  
   var ccModel = new QuickToolsModel();
