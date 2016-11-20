@@ -15,9 +15,9 @@ function( Marionette, Handlebars, CardSelector, Radio ){
       radio = Radio.channel( 'card-selector');
     },
     events: {
-      'change': 'triggerRadioEvent'
+      'change': 'triggerSelectChangedEvent'
     },
-    triggerRadioEvent: function(){      
+    triggerSelectChangedEvent: function(){      
       radio.trigger('select:changed', this.$el.find('select').val());
     }    
   });
