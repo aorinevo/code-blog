@@ -137,18 +137,20 @@ define( [
         } );
     }
 
-    // CreditCardActionModel
+    // QuickToolsLinkModel
     // ---------------------        
-    var CreditCardActionModel = Backbone.Model.extend( {
+    var QuickToolsLinksModel = Backbone.Model.extend( {
         initialize: function ( options ) {
-            props = {};
+            var radio = Radio.channel( 'card-selector');
+            props = {};            
             props.secureHost = "";            
             this.set( {
                 quickToolsLinks: quickToolsLinks,
                 props: props,
                 walletURL: props.secureHost + "/account/wallet?ocwallet=true&cm_sp=creditcardlanding_credit_gateway-_-bloomingdales_credit-_-view_bwallet"
             } );
-            Radio.channel( 'card-selector').on( 'select:changed', this.updateQuickToolsLinks.bind(this));
+            radio.on( 'select:changed', this.updateQuickToolsLinks.bind(this));
+            radio.trigger( 'select:changed', "[true,true,true,true,true,true,true,true]");
         },
         // `updateQuickToolsLinks` takes credit card data and updates the `quickToolsLinks` object and sets the quickToolsLinksLeft and quickToolsLinksRight 
         // model attributes.
@@ -164,5 +166,5 @@ define( [
         }
     } );
 
-    return CreditCardActionModel;
+    return QuickToolsLinksModel;
 } );
