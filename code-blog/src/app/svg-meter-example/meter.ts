@@ -59,6 +59,8 @@ export class Meter {
     return CONFIG;
   };
   
+  public describeArc = describeArc;
+  
   public render() {
     //Create DOM elements
     var svg = document.createElementNS( "http://www.w3.org/2000/svg", "svg" ),

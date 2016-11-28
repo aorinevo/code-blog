@@ -24,6 +24,7 @@
     "@types/underscore": "^1.7.35",
     "core-js": "^2.4.1",
     "jquery": "^3.1.1",
+    "jquery-ui": "^1.12.1",
     "rxjs": "5.0.0-beta.12",
     "ts-helpers": "^1.1.1",
     "underscore": "^1.8.3",
