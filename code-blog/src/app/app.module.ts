@@ -10,6 +10,7 @@ import { RadioHbsComponentsExampleComponent } from './radio-hbs-components-examp
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { MeterComponent } from './meter/meter.component';
+import { LeftNavComponent } from './left-nav/left-nav.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MeterComponent } from './meter/meter.component';
     RadioHbsComponentsExampleComponent,
     HomeComponent,
     HeaderComponent,
-    MeterComponent
+    MeterComponent,    
+    LeftNavComponent
   ],
   imports: [
     BrowserModule,
