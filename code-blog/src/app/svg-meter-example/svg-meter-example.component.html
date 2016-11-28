@@ -6,7 +6,22 @@
       <li><a routerLink="/radio-hbs-components-example">Radio HBS Component Example</a></li>
     </ul>
   </div>
-  <div class="col-xs-8">
-    <div id="svg-meter-container"></div>
+  <div class="col-xs-8">    
+    <div id="svg-meter-container">  
+      <svg [attr.width]="2* svgMeta.radiusOuter" [attr.height]="2*svgMeta.radiusOuter">      
+        <path *ngFor="let path of pathList; let i = index;" 
+          [attr.id]="svgMeta.id + '-' + i" 
+          [attr.stroke]="path.stroke" 
+          fill="none" 
+          [attr.stroke-width]="svgMeta.strokeWidth" 
+          [attr.d]="path.d">
+        </path>      
+      </svg>
+      <div class='svg-meter-content'>
+          <div class='lty-as-dog'></div>  
+          <div class='lty-as-top-of-the-list-label'>TOP OF THE LIST</div>          
+          <div><span class='lty-as-balance'>{{pointsCounter}}</span></div>        
+      </div>
+    </div>
   </div>
 </div>
