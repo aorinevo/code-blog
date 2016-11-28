@@ -9,6 +9,7 @@ import { SvgMeterExampleComponent } from './svg-meter-example/svg-meter-example.
 import { RadioHbsComponentsExampleComponent } from './radio-hbs-components-example/radio-hbs-components-example.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
+import { MeterComponent } from './meter/meter.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HeaderComponent } from './header/header.component';
     SvgMeterExampleComponent,
     RadioHbsComponentsExampleComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    MeterComponent
   ],
   imports: [
     BrowserModule,
