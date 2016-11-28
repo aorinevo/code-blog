@@ -57591,6 +57591,35 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var SvgMeterExampleComponent = (function () {
     function SvgMeterExampleComponent() {
+        this.meters = [
+            {
+                radiusOuter: 100,
+                radiusInner: 80,
+                part: 3000,
+                whole: 5000,
+                strokeWhole: 'gray',
+                strokePart: 'red',
+                strokeWidth: 20
+            },
+            {
+                radiusOuter: 100,
+                radiusInner: 95,
+                part: 2000,
+                whole: 5000,
+                strokeWhole: 'gray',
+                strokePart: 'blue',
+                strokeWidth: 5
+            },
+            {
+                radiusOuter: 100,
+                radiusInner: 90,
+                part: 4000,
+                whole: 5000,
+                strokeWhole: 'gray',
+                strokePart: 'green',
+                strokeWidth: 10
+            }
+        ];
     }
     SvgMeterExampleComponent.prototype.ngOnInit = function () {
     };
@@ -70982,7 +71011,7 @@ module.exports = "<div class=\"row\">\n  <div class=\"col-xs-4\">\n    <ul class
 /* 652 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-xs-4\">\n    <ancb-left-nav></ancb-left-nav>\n  </div>\n  <div class=\"col-xs-8\">        \n      <ancb-meter [radiusOuter]=\"100\" [radiusInner]=\"90\" [part]=\"3000\" [whole]=\"5000\" strokeWhole=\"#A1A1A1\" strokePart=\"#FFECEC\" [strokeWidth]=\"10\"></ancb-meter>    \n  </div>\n</div>"
+module.exports = "<div class=\"row\">  \n  <div class=\"col-xs-4\">\n    <ancb-left-nav></ancb-left-nav>\n  </div>\n  <div class=\"col-xs-8\">        \n      <h2 class=\"col-sm-12\">SVG Meter Example</h2>\n      <div class=\"col-sm-6\" *ngFor=\"let meter of meters;\">        \n        <ancb-meter [radiusOuter]=\"meter.radiusOuter\" [radiusInner]=\"meter.radiusInner\" [part]=\"meter.part\" [whole]=\"meter.whole\" [strokeWhole]=\"meter.strokeWhole\" [strokePart]=\"meter.strokePart\" [strokeWidth]=\"meter.strokeWidth\"></ancb-meter> \n      </div>\n  </div>\n</div>"
 
 /***/ },
 /* 653 */
