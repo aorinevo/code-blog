@@ -70994,13 +70994,13 @@ module.exports = ""
 /* 643 */
 /***/ function(module, exports) {
 
-module.exports = "#ancb-page-left-nav {\n  border-right: 1px solid #777;\n}"
+module.exports = "#ancb-page-left-nav {\n  border-right: 2px solid rgba(0,0,0,0.05);\n}"
 
 /***/ },
 /* 644 */
 /***/ function(module, exports) {
 
-module.exports = "#svg-meter-container{\n  position: relative;  \n  width: 200px;\n}\n\n.svg-meter-content {\n  position: absolute;\n  top: 100px;\n  width: 100%;\n  text-align: center;\n}"
+module.exports = "#svg-meter-container{\n  position: relative;  \n  width: 200px;\n  margin-right: auto;\n  margin-left: auto;\n}\n\n.svg-meter-content {\n  position: absolute;\n  top: 100px;\n  width: 100%;\n  text-align: center;\n}"
 
 /***/ },
 /* 645 */
@@ -71018,7 +71018,7 @@ module.exports = "#ancb-page-header {\n  border-bottom: 1px solid #777;\n  paddi
 /* 647 */
 /***/ function(module, exports) {
 
-module.exports = ""
+module.exports = "#ancb-page-navbar {\n  margin-bottom: 0;\n}"
 
 /***/ },
 /* 648 */
@@ -71036,7 +71036,7 @@ module.exports = "\n"
 /* 650 */
 /***/ function(module, exports) {
 
-module.exports = "<ancb-page-navbar></ancb-page-navbar>\n<div class=\"row\">  \n  <div class=\"col-xs-4\">\n    <ancb-left-nav></ancb-left-nav>\n  </div>\n  <div class=\"col-xs-8\"> \n    <router-outlet></router-outlet>\n  </div>\n</div>\n<ancb-page-footer></ancb-page-footer>\n  \n"
+module.exports = "<ancb-page-navbar></ancb-page-navbar>\n<div class=\"row\">  \n  <div class=\"col-sm-3\">\n    <ancb-left-nav></ancb-left-nav>\n  </div>\n  <div class=\"col-sm-9\"> \n    <router-outlet></router-outlet>\n  </div>\n</div>\n<ancb-page-footer></ancb-page-footer>\n  \n"
 
 /***/ },
 /* 651 */
@@ -71048,7 +71048,7 @@ module.exports = "<ancb-page-header mytitle=\"Home\"></ancb-page-header>"
 /* 652 */
 /***/ function(module, exports) {
 
-module.exports = "<ul id=\"ancb-page-left-nav\" class=\"nav\">\n  <li><a routerLink=\"/\">Home</a></li>\n  <li><a routerLink=\"/svg-meter-example\">SVG Meter Example</a></li>\n  <li><a routerLink=\"/radio-hbs-components-example\">Radio HBS Component Example</a></li>\n</ul>\n"
+module.exports = "<div id=\"ancb-page-left-nav\">\n<div class=\"LI-profile-badge\"  data-version=\"v1\" data-size=\"medium\" data-locale=\"en_US\" data-type=\"vertical\" data-theme=\"light\" data-vanity=\"aorinevo\"><a class=\"LI-simple-link\" href='https://www.linkedin.com/in/aorinevo?trk=profile-badge'>Aori Nevo, PhD</a></div>\n<ul class=\"nav\">\n  <li><a routerLink=\"/\">Home</a></li>\n  <li><a routerLink=\"/svg-meter-example\">SVG Meter Example</a></li>\n  <li><a routerLink=\"/radio-hbs-components-example\">Radio HBS Component Example</a></li>\n</ul>\n</div>"
 
 /***/ },
 /* 653 */
@@ -71072,7 +71072,7 @@ module.exports = "<h1 id=\"ancb-page-header\" class=\"col-sm-12\">{{mytitle}}</h
 /* 656 */
 /***/ function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-default\">\n  <div class=\"container-fluid\">\n    <!-- Brand and toggle get grouped for better mobile display -->\n    <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n      <a class=\"navbar-brand\" routerLink=\"/\">codeBlog</a>\n    </div>\n\n    <!-- Collect the nav links, forms, and other content for toggling -->\n    <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n      <ul class=\"nav navbar-nav navbar-right\">        \n        <li class=\"dropdown\">\n          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Menu <span class=\"caret\"></span></a>\n          <ul class=\"dropdown-menu\">\n            <li><a href=\"#\">Action</a></li>\n            <li><a href=\"#\">Another action</a></li>\n            <li><a href=\"#\">Something else here</a></li>\n            <li role=\"separator\" class=\"divider\"></li>\n            <li><a href=\"#\">Separated link</a></li>\n          </ul>\n        </li>\n      </ul>\n    </div><!-- /.navbar-collapse -->\n  </div><!-- /.container-fluid -->\n</nav>\n"
+module.exports = "<nav id=\"ancb-page-navbar\" class=\"navbar navbar-default\">\n  <div class=\"container-fluid\">\n    <!-- Brand and toggle get grouped for better mobile display -->\n    <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n      <a class=\"navbar-brand\" routerLink=\"/\">codeBlog</a>\n    </div>\n\n    <!-- Collect the nav links, forms, and other content for toggling -->\n    <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n      <ul class=\"nav navbar-nav navbar-right\">        \n        <li class=\"dropdown\">\n          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Menu <span class=\"caret\"></span></a>\n          <ul class=\"dropdown-menu\">\n            <li><a href=\"#\">Action</a></li>\n            <li><a href=\"#\">Another action</a></li>\n            <li><a href=\"#\">Something else here</a></li>\n            <li role=\"separator\" class=\"divider\"></li>\n            <li><a href=\"#\">Separated link</a></li>\n          </ul>\n        </li>\n      </ul>\n    </div><!-- /.navbar-collapse -->\n  </div><!-- /.container-fluid -->\n</nav>\n"
 
 /***/ },
 /* 657 */
