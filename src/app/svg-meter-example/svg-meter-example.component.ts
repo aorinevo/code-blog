@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './svg-meter-example.component.html',
   styleUrls: ['./svg-meter-example.component.css']
 })
-export class SvgMeterExampleComponent implements OnInit {       
+export class SvgMeterExampleComponent {       
   meters: Object[] =[
     {
       radiusOuter: 100,
@@ -35,12 +35,5 @@ export class SvgMeterExampleComponent implements OnInit {
       strokeWidth: 10
     }
   ];
-  
-  constructor() { 
-  }
-
-  ngOnInit() {   
-    
-  }      
 
 }
