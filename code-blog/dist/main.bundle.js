@@ -57646,7 +57646,7 @@ var SvgMeterExampleComponent = (function () {
                 radiusInner: 80,
                 part: 3000,
                 whole: 5000,
-                strokeWhole: 'gray',
+                strokeWhole: '#ddd',
                 strokePart: 'red',
                 strokeWidth: 20
             },
@@ -57655,7 +57655,7 @@ var SvgMeterExampleComponent = (function () {
                 radiusInner: 95,
                 part: 2000,
                 whole: 5000,
-                strokeWhole: 'gray',
+                strokeWhole: '#ddd',
                 strokePart: 'blue',
                 strokeWidth: 5
             },
@@ -57664,7 +57664,7 @@ var SvgMeterExampleComponent = (function () {
                 radiusInner: 90,
                 part: 4000,
                 whole: 5000,
-                strokeWhole: 'gray',
+                strokeWhole: '#ddd',
                 strokePart: 'green',
                 strokeWidth: 10
             }
@@ -70994,7 +70994,7 @@ module.exports = ""
 /* 643 */
 /***/ function(module, exports) {
 
-module.exports = "#ancb-page-left-nav {\n  border-right: 2px solid rgba(0,0,0,0.05);\n}"
+module.exports = "#ancb-page-left-nav {\n  border-right: 1px solid rgba(0,0,0,0.05);\n}"
 
 /***/ },
 /* 644 */
@@ -71006,13 +71006,13 @@ module.exports = "#svg-meter-container{\n  position: relative;  \n  width: 200px
 /* 645 */
 /***/ function(module, exports) {
 
-module.exports = "#ancb-page-footer {\n  background-color: #f8f8f8;\n  color: #777;\n  text-align: center;\n  margin-top: 20px;\n}"
+module.exports = "#ancb-page-footer {\n  background-color: #f8f8f8;\n  color: #777;\n  text-align: center;\n  margin-top: 0px;\n  \n}"
 
 /***/ },
 /* 646 */
 /***/ function(module, exports) {
 
-module.exports = "#ancb-page-header {\n  border-bottom: 1px solid #777;\n  padding-bottom: 10px;\n}"
+module.exports = "#ancb-page-header {\n  border-bottom: 1px solid #ddd;\n  padding-bottom: 10px;\n}"
 
 /***/ },
 /* 647 */
@@ -71036,19 +71036,19 @@ module.exports = "\n"
 /* 650 */
 /***/ function(module, exports) {
 
-module.exports = "<ancb-page-navbar></ancb-page-navbar>\n<div class=\"row\">  \n  <div class=\"col-sm-3\">\n    <ancb-left-nav></ancb-left-nav>\n  </div>\n  <div class=\"col-sm-9\"> \n    <router-outlet></router-outlet>\n  </div>\n</div>\n<ancb-page-footer></ancb-page-footer>\n  \n"
+module.exports = "<div class=\"container-fluid\">\n  <ancb-page-navbar></ancb-page-navbar>\n  <div class=\"row\">  \n    <div class=\"col-sm-3\">\n      <ancb-left-nav></ancb-left-nav>\n    </div>\n    <div class=\"col-sm-9\"> \n      <router-outlet></router-outlet>\n    </div>\n  </div>\n  <ancb-page-footer></ancb-page-footer>\n</div>\n  \n"
 
 /***/ },
 /* 651 */
 /***/ function(module, exports) {
 
-module.exports = "<ancb-page-header mytitle=\"Home\"></ancb-page-header>"
+module.exports = "<ancb-page-header mytitle=\"Home\"></ancb-page-header>\n\n<div class=\"row\">\n  <div class=\"col-sm-12\">\n    <h2>Introduction</h2>\n  </div>  \n  \n  <div class=\"col-sm-12\">\n  This site contains code examples built using various javascript framesworks and libraries:\n    <ul>\n      <li>Backbone</li>\n      <li>Marionette</li>\n      <li>AngularJS 1.x</li>\n      <li>AngularJS 2</li>\n      <li>TypeScript</li>\n      <li>ES6</li>\n      <li>webpack</li>\n      <li>jquery</li>\n      <li>underscore</li>\n      <li>handlebars</li>      \n    </ul>\n  The site itself is built in AngularJS 2.  For each example, the appropriate files are imported.\n  </div>\n</div>"
 
 /***/ },
 /* 652 */
 /***/ function(module, exports) {
 
-module.exports = "<div id=\"ancb-page-left-nav\">\n<div class=\"LI-profile-badge\"  data-version=\"v1\" data-size=\"medium\" data-locale=\"en_US\" data-type=\"vertical\" data-theme=\"light\" data-vanity=\"aorinevo\"><a class=\"LI-simple-link\" href='https://www.linkedin.com/in/aorinevo?trk=profile-badge'>Aori Nevo, PhD</a></div>\n<ul class=\"nav\">\n  <li><a routerLink=\"/\">Home</a></li>\n  <li><a routerLink=\"/svg-meter-example\">SVG Meter Example</a></li>\n  <li><a routerLink=\"/radio-hbs-components-example\">Radio HBS Component Example</a></li>\n</ul>\n</div>"
+module.exports = "<div id=\"ancb-page-left-nav\">\n<div class=\"LI-profile-badge hidden-xs hidden-sm\"  data-version=\"v1\" data-size=\"medium\" data-locale=\"en_US\" data-type=\"vertical\" data-theme=\"light\" data-vanity=\"aorinevo\"><a class=\"LI-simple-link\" href='https://www.linkedin.com/in/aorinevo?trk=profile-badge'>Aori Nevo, PhD</a></div>\n<ul class=\"nav\">\n  <li><a routerLink=\"/\">Home</a></li>\n  <li><a routerLink=\"/svg-meter-example\">SVG Meter Example</a></li>\n  <li><a routerLink=\"/radio-hbs-components-example\">Radio HBS Component Example</a></li>\n</ul>\n</div>"
 
 /***/ },
 /* 653 */

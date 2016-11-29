@@ -12,7 +12,7 @@ export class SvgMeterExampleComponent implements OnInit {
       radiusInner: 80,
       part: 3000,
       whole: 5000,
-      strokeWhole: 'gray',
+      strokeWhole: '#ddd',
       strokePart: 'red',
       strokeWidth: 20
     },
@@ -21,7 +21,7 @@ export class SvgMeterExampleComponent implements OnInit {
       radiusInner: 95,
       part: 2000,
       whole: 5000,
-      strokeWhole: 'gray',
+      strokeWhole: '#ddd',
       strokePart: 'blue',
       strokeWidth: 5
     },
@@ -30,7 +30,7 @@ export class SvgMeterExampleComponent implements OnInit {
       radiusInner: 90,
       part: 4000,
       whole: 5000,
-      strokeWhole: 'gray',
+      strokeWhole: '#ddd',
       strokePart: 'green',
       strokeWidth: 10
     }
