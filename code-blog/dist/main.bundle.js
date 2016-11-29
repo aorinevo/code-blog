@@ -71012,7 +71012,7 @@ module.exports = "#ancb-page-footer {\n  background-color: #f8f8f8;\n  color: #7
 /* 646 */
 /***/ function(module, exports) {
 
-module.exports = ""
+module.exports = "#ancb-page-header {\n  border-bottom: 1px solid #777;\n  padding-bottom: 10px;\n}"
 
 /***/ },
 /* 647 */
@@ -71042,7 +71042,7 @@ module.exports = "<ancb-page-navbar></ancb-page-navbar>\n<div class=\"row\">  \n
 /* 651 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"col-xs-8\">\n  <ancb-page-header mytitle=\"Home\"></ancb-page-header>\n</div>"
+module.exports = "<ancb-page-header mytitle=\"Home\"></ancb-page-header>"
 
 /***/ },
 /* 652 */
@@ -71060,13 +71060,13 @@ module.exports = "<div id=\"svg-meter-container\"> \n  <svg [attr.width]=\"2*met
 /* 654 */
 /***/ function(module, exports) {
 
-module.exports = "<div id=\"ancb-page-footer\" class=\"panel panel-default\">\n  <div class=\"panel-body\">\n    Basic panel example\n  </div>\n</div>\n"
+module.exports = "<div id=\"ancb-page-footer\" class=\"panel panel-default\">\n  <div class=\"panel-body\">\n    Aori Nevo <br/>\n    UI Developer | Bloomingdale's <br/>\n    email contact: ([first name][last name]).toLowerCase( ) at gmail dot com <br/>\n  </div>\n</div>\n"
 
 /***/ },
 /* 655 */
 /***/ function(module, exports) {
 
-module.exports = "<h1 class=\"col-sm-12\">{{mytitle}}</h1>\n"
+module.exports = "<h1 id=\"ancb-page-header\" class=\"col-sm-12\">{{mytitle}}</h1>\n"
 
 /***/ },
 /* 656 */
@@ -71078,7 +71078,7 @@ module.exports = "<nav class=\"navbar navbar-default\">\n  <div class=\"containe
 /* 657 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"col-xs-8\">\n  <ancb-page-header mytitle=\"Radio/Handlebars/Components\"></ancb-page-header>\n</div>\n\n"
+module.exports = "<ancb-page-header mytitle=\"Radio/Handlebars/Components\"></ancb-page-header>\n\n\n"
 
 /***/ },
 /* 658 */
