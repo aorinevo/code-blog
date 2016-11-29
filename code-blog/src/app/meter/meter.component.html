@@ -1,17 +1,17 @@
 <div id="svg-meter-container"> 
-  <svg [attr.width]="2*radiusOuter" [attr.height]="2*radiusOuter">  
+  <svg [attr.width]="2*meter.radiusOuter" [attr.height]="2*meter.radiusOuter">  
     <path 
       [attr.id]="pathIdPrefix + '0'" 
-      [attr.stroke]="strokeWhole" 
+      [attr.stroke]="meter.strokeWhole" 
       fill="none" 
-      [attr.stroke-width]="strokeWidth" 
-      [attr.d]="describeArc(radiusOuter, radiusOuter, radiusInner, 0, 359.999)">
+      [attr.stroke-width]="meter.strokeWidth" 
+      [attr.d]="describeArc(meter.radiusOuter, meter.radiusOuter, meter.radiusInner, 0, 359.999)">
     </path> 
     <path 
       [attr.id]="pathIdPrefix + '1'" 
-      [attr.stroke]="strokePart" 
+      [attr.stroke]="meter.strokePart" 
       fill="none" 
-      [attr.stroke-width]="strokeWidth" 
+      [attr.stroke-width]="meter.strokeWidth" 
       [attr.d]="path2">
     </path>       
   </svg>

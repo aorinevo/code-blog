@@ -8,19 +8,20 @@ import { AppComponent } from './app.component';
 import { SvgMeterExampleComponent } from './svg-meter-example/svg-meter-example.component';
 import { RadioHbsComponentsExampleComponent } from './radio-hbs-components-example/radio-hbs-components-example.component';
 import { HomeComponent } from './home/home.component';
-import { HeaderComponent } from './header/header.component';
 import { MeterComponent } from './meter/meter.component';
 import { LeftNavComponent } from './left-nav/left-nav.component';
+import { PageHeaderComponent } from './page-header/page-header.component';
+import { PageFooterComponent } from './page-footer/page-footer.component';
+import { PageNavbarComponent } from './page-navbar/page-navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SvgMeterExampleComponent,
     RadioHbsComponentsExampleComponent,
-    HomeComponent,
-    HeaderComponent,
+    HomeComponent,    
     MeterComponent,    
-    LeftNavComponent
+    LeftNavComponent, PageHeaderComponent, PageFooterComponent, PageNavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +40,7 @@ import { LeftNavComponent } from './left-nav/left-nav.component';
         path: 'radio-hbs-components-example',
         component: RadioHbsComponentsExampleComponent
       }
-]) 
+    ]) 
   ],
   providers: [],
   bootstrap: [AppComponent]

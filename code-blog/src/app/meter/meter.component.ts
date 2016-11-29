@@ -16,6 +16,17 @@ function polarToCartesian( centerX, centerY, radius, angleInDegrees ) {
   };
 }
 
+interface Meter {  
+  radiusOuter: number,
+  radiusInner: number,
+  part: number,
+  whole: number,
+  strokeWhole: string,
+  strokePart: string,
+  strokeWidth: number,
+  pathIdPrefix: string,
+};
+
 @Component({
   selector: 'ancb-meter',
   templateUrl: './meter.component.html',
@@ -23,14 +34,8 @@ function polarToCartesian( centerX, centerY, radius, angleInDegrees ) {
 })
 export class MeterComponent implements OnInit {
 
-  @Input() radiusOuter: number;
-  @Input() radiusInner: number;
-  @Input() part: number;
-  @Input() whole: number;
-  @Input() strokeWhole: string;
-  @Input() strokePart: string;
-  @Input() strokeWidth: number;
-  @Input() pathIdPrefix: string;
+//Add interface
+  @Input() meter: Meter;
   angle: number;
   path2: string;
   pointsCounter: number;
@@ -55,7 +60,7 @@ export class MeterComponent implements OnInit {
         'pointsAccumulated': 0,            
         'angle': 0
     } ).animate( {
-        'pointsAccumulated': this.part,            
+        'pointsAccumulated': this.meter.part,            
         'angle': this.angle
     }, {
         duration: 2000, 
@@ -63,7 +68,7 @@ export class MeterComponent implements OnInit {
         step: function ( now, fx ) {
             switch ( fx.prop ) {
             case 'angle':
-                this.path2 = this.describeArc(this.radiusOuter, this.radiusOuter, this.radiusInner, 0, now);
+                this.path2 = this.describeArc(this.meter.radiusOuter, this.meter.radiusOuter, this.meter.radiusInner, 0, now);
                 break;
             default:
                 this.pointsCounter = Math.ceil( now );
@@ -73,8 +78,8 @@ export class MeterComponent implements OnInit {
   }
 
   ngOnInit() {
-    if( !this.pathIdPrefix){ this.pathIdPrefix = "meter-arc-"};
-    this.angle = this.part/this.whole * 360;
+    if( !this.meter.pathIdPrefix){ this.meter.pathIdPrefix = "meter-arc-"};
+    this.angle = this.meter.part/this.meter.whole * 360;
     this.animateMeter();
   }
 }
