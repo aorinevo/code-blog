@@ -70994,7 +70994,7 @@ module.exports = ""
 /* 643 */
 /***/ function(module, exports) {
 
-module.exports = "#ancb-page-left-nav {\n  border-right: 1px solid rgba(0,0,0,0.05);\n}"
+module.exports = "@media (min-width: 768px) {\n  #ancb-page-left-nav {\n    border-right: 1px solid rgba(0,0,0,0.05);\n  }\n}"
 
 /***/ },
 /* 644 */

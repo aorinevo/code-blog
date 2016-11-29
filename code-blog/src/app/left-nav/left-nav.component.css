@@ -1,3 +1,5 @@
-#ancb-page-left-nav {
-  border-right: 1px solid rgba(0,0,0,0.05);
+@media (min-width: 768px) {
+  #ancb-page-left-nav {
+    border-right: 1px solid rgba(0,0,0,0.05);
+  }
 }
