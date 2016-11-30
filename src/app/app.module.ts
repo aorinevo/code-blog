@@ -13,6 +13,8 @@ import { LeftNavComponent } from './left-nav/left-nav.component';
 import { PageHeaderComponent } from './page-header/page-header.component';
 import { PageFooterComponent } from './page-footer/page-footer.component';
 import { PageNavbarComponent } from './page-navbar/page-navbar.component';
+import { FlyoutTabComponent } from './flyout-tab/flyout-tab.component';
+import { FlyoutTabExampleComponent } from './flyout-tab-example/flyout-tab-example.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,7 @@ import { PageNavbarComponent } from './page-navbar/page-navbar.component';
     RadioHbsComponentsExampleComponent,
     HomeComponent,    
     MeterComponent,    
-    LeftNavComponent, PageHeaderComponent, PageFooterComponent, PageNavbarComponent
+    LeftNavComponent, PageHeaderComponent, PageFooterComponent, PageNavbarComponent, FlyoutTabComponent, FlyoutTabExampleComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +41,10 @@ import { PageNavbarComponent } from './page-navbar/page-navbar.component';
       {
         path: 'radio-hbs-components-example',
         component: RadioHbsComponentsExampleComponent
+      },
+      {
+        path: 'flyout-tab-example',
+        component: FlyoutTabExampleComponent
       }
     ]) 
   ],

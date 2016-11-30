@@ -1,4 +1,31 @@
 <ancb-page-header mytitle="SVG Meter Example"></ancb-page-header>
+
+
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Introduction</h2>
+    <p>
+      The meter component displays an svg meter. The radius, color, and stroke-width (thickness of the meter) 
+      can be changed. 
+    </p>
+  </div>
+  <div class="col-xs-12">
+    <h2>Technicals</h2>
+    <p>
+      Meter animation is done using jquery but the component does not target elements in the DOM.  Instead,
+      jquery takes an object containing the part and angle properties of the meter object.  The 
+      call back function of the animate method modifies the appropriate svg properties 
+      (i.e. property d) that are bound to the meter component. The counter animation is handled in a 
+      similar way.
+    </p>    
+    <p>
+      The meter component takes one input; an object of type Meter.
+    </p>
+  </div>  
+</div>
+
+
+
 <div class="col-sm-6" *ngFor="let meter of meters;">        
   <ancb-meter [meter]="meter"></ancb-meter> 
 </div>

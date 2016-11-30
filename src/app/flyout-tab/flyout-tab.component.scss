@@ -1,0 +1,42 @@
+@function rem-calc($px){
+  @return unquote($px + 'px');
+}
+
+$avenir-font-family: Avenir, Helvetica, Arial, sans-serif;
+$avenir-font-heavy: "Avenir LT W01 85 Heavy";
+$primary-color: #000000;
+$secondary-color: #999999;
+$bloomiesWhite: #fff;
+$primary-background: #FFFFFF;
+$secondary-background: #EFEFEF;
+
+#ancb-flyout-panel {
+  cursor: default;
+  &.open {
+    right: 0;
+    -webkit-transition: right 1s, -webkit-transform 1s;
+    transition: right 1s, transform 1s;
+  }
+  right: -235px;
+  -webkit-transition: right 1s, -webkit-transform 1s;
+  transition: right 1s, transform 1s;
+  background-color: black;
+  color: $bloomiesWhite;
+  width: 300px;  
+  position: fixed;
+  right: -235px;
+  bottom: 5%;
+  .tab {  
+    cursor: pointer;
+    .text{      
+      height: 235px;
+      width: 30px;
+      text-align: center;
+      writing-mode: vertical-lr;
+    }
+  }
+  .content {
+    width: 235px;
+    height: 235px;
+  }
+}

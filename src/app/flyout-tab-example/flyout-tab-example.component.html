@@ -1,0 +1,35 @@
+<ancb-page-header mytitle="Flyout Panel Example"></ancb-page-header>
+
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Introduction</h2>
+    <p>
+      The flyout panel component displays a panel on the bottom-right side of the browser window.  
+      Initially the panel is closed.  When the user clicks the panel tab, the panel animates open.  
+      When user clicks the panel tab again, the panel animates closed.    
+    </p>
+  </div>
+  <div class="col-xs-12">
+    <h2>Technicals</h2>
+    <p>
+      Panel animation is done using css.  The open class animates the panel open in 1 second.  Similarly, 
+      when the open class is removed, the default css animates the panel closed in 1 second.
+    </p>
+    <div>
+      <p>
+      The flyout component takes two inputs:
+      </p>
+      <ul>
+        <li>A tabText property binding set to the desired tab text.</li>
+        <li>An ng-content input which passes all html content placed between
+          the ancb-flyout-panel directive.  The content is then dropped into the panel
+          content section.
+        </li>
+      </ul>
+    </div>
+  </div>  
+</div>
+
+<ancb-flyout-tab [tabText]="tabText">
+  <ancb-meter [meter]="meter"></ancb-meter>
+</ancb-flyout-tab>
