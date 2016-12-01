@@ -15,6 +15,10 @@ import { PageFooterComponent } from './page-footer/page-footer.component';
 import { PageNavbarComponent } from './page-navbar/page-navbar.component';
 import { FlyoutTabComponent } from './flyout-tab/flyout-tab.component';
 import { FlyoutTabExampleComponent } from './flyout-tab-example/flyout-tab-example.component';
+import { D3Component } from './d3/d3.component';
+import { D3ExampleComponent } from './d3-example/d3-example.component';
+import { MeetingsComponent } from './meetings/meetings.component';
+import { MeetingsPageComponent } from './meetings-page/meetings-page.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,7 @@ import { FlyoutTabExampleComponent } from './flyout-tab-example/flyout-tab-examp
     RadioHbsComponentsExampleComponent,
     HomeComponent,    
     MeterComponent,    
-    LeftNavComponent, PageHeaderComponent, PageFooterComponent, PageNavbarComponent, FlyoutTabComponent, FlyoutTabExampleComponent
+    LeftNavComponent, PageHeaderComponent, PageFooterComponent, PageNavbarComponent, FlyoutTabComponent, FlyoutTabExampleComponent, D3Component, D3ExampleComponent, MeetingsComponent, MeetingsPageComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +49,15 @@ import { FlyoutTabExampleComponent } from './flyout-tab-example/flyout-tab-examp
       {
         path: 'flyout-tab-example',
         component: FlyoutTabExampleComponent
-      }
+      },
+      {
+        path: 'd3-example',
+        component: D3ExampleComponent
+      },
+      {
+        path: 'meetings',
+        component: MeetingsPageComponent
+      }            
     ]) 
   ],
   providers: [],

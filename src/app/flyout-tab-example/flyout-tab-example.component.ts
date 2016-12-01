@@ -8,15 +8,21 @@ import { Component } from '@angular/core';
 export class FlyoutTabExampleComponent {
   
   meter: Object =     {
-    radiusOuter: 100,
-    radiusInner: 80,
-    part: 3000,
-    whole: 5000,
-    strokeWhole: '#ddd',
-    strokePart: 'red',
-    strokeWidth: 20
+    radiusOuter: 45,
+    radiusInner: 35,
+    part: 4,
+    whole: 5,
+    strokeWhole: '#F1F1F1',
+    strokePart: '#A1A1A1',
+    strokeWidth: 10
   };  
   
+  reanimate: boolean;
+  
   tabText: string = "BECOME A TOP REVIEWER";
+  
+  test(event){
+    this.reanimate = event.value;
+  }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import * as $ from 'jquery';
 
 $.extend($.easing, {
@@ -32,13 +32,14 @@ interface Meter {
   templateUrl: './meter.component.html',
   styleUrls: ['./meter.component.css']
 })
-export class MeterComponent implements OnInit {
+export class MeterComponent implements OnInit, OnChanges {
 
 //Add interface
   @Input() meter: Meter;
+  @Input() reanimate?: boolean;
   angle: number;
   path2: string;
-  pointsCounter: number;
+  public pointsCounter: number;  
 
   describeArc( x, y, radius, startAngle, endAngle ) {
 
@@ -72,6 +73,7 @@ export class MeterComponent implements OnInit {
                 break;
             default:
                 this.pointsCounter = Math.ceil( now );
+                console.log(this.pointsCounter);
             }
         }.bind(this)
     } );  
@@ -81,5 +83,11 @@ export class MeterComponent implements OnInit {
     if( !this.meter.pathIdPrefix){ this.meter.pathIdPrefix = "meter-arc-"};
     this.angle = this.meter.part/this.meter.whole * 360;
     this.animateMeter();
+  }
+  
+  ngOnChanges( changes: SimpleChanges ){
+    if( changes['reanimate'] && changes['reanimate']['currentValue'] ){
+      this.animateMeter();
+    }
   }
 }

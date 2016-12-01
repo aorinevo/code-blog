@@ -1,4 +1,4 @@
-<div id="svg-meter-container"> 
+<div id="svg-meter-container" [style.width]="2*meter.radiusOuter + 'px'">   
   <svg [attr.width]="2*meter.radiusOuter" [attr.height]="2*meter.radiusOuter">  
     <path 
       [attr.id]="pathIdPrefix + '0'" 
@@ -16,8 +16,6 @@
     </path>       
   </svg>
   <div class='svg-meter-content'>
-      <div class='lty-as-dog'></div>  
-      <div class='lty-as-top-of-the-list-label'>TOP OF THE LIST</div>          
-      <div><span class='lty-as-balance'>{{pointsCounter}}</span></div>        
+    <ng-content></ng-content>
   </div>
 </div>

@@ -26,10 +26,20 @@
           content section.
         </li>
       </ul>
+      <p>
+        The flyout component emits a panelOpenChange event when the panel tab is clicked.  The example hooks into,
+        this event using the OnChanges lifecycle hook and changes the optional reanimate bound boolean property.
+        Thus, when the panel is opened the meter is animated.  Note the meter does not animate on close.
+      </p>
+      <p>
+        In the live example, we drop the meter component into the content section of the flyout panel component.
+      </p>      
     </div>
   </div>  
 </div>
 
-<ancb-flyout-tab [tabText]="tabText">
-  <ancb-meter [meter]="meter"></ancb-meter>
+<ancb-flyout-tab [tabText]="tabText" (panelOpenChange)="test($event);">
+  <ancb-meter [meter]="meter" [reanimate]="reanimate">           
+    <div><span [style.color]="'white'">{{pointsCounter}}/{{meter.whole}}</span></div>
+  </ancb-meter>
 </ancb-flyout-tab>

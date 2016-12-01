@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'ancb-flyout-tab',
@@ -8,11 +8,15 @@ import { Component, Input } from '@angular/core';
 export class FlyoutTabComponent {
 
   @Input() tabText: string;
+  @Output() panelOpenChange = new EventEmitter<Object>();
   
   panelOpen: boolean = false;
 
   togglePanel(){
     this.panelOpen = !this.panelOpen; 
+    this.panelOpenChange.emit({
+      value: this.panelOpen
+    });
   }
 
 }
