@@ -1,10 +1,13 @@
+<div class="meeting-card">
 <div class="col-xs-2">
-  {{meeting.event_date}}
+  <div class="circle">
+    <div class="month">{{meeting.event_date | date: 'MMM'}}</div>
+    <div class="day">{{meeting.event_date | date: 'd'}}</div>
+    <div class="year">{{meeting.event_date | date: 'y'}}</div>
+  </div>
 </div>
 <div class="col-xs-8">
-  {{meeting.title}}
+  <div class="title">{{meeting.title}} <a href="{{meeting.event_url}}"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a></div>
 </div>
-<div class="col-xs-2">
-  <a href="{{meeting.event_url}}">Go!</a>
 </div>
 

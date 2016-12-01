@@ -1,0 +1,29 @@
+.meeting-card {
+	margin-bottom: 20px;
+}
+
+.circle {
+	position: relative;
+	border-radius: 50%;
+	width: 100px;  
+	height: 100px; 	
+  background-color: beige;
+}
+
+.day, .year, .month {
+	text-align: center;
+	position: relative;	
+}
+
+.day {
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.month {
+	padding-top: 12px;
+}
+
+.title {
+	font-size: 16px;
+}
