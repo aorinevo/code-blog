@@ -7,15 +7,21 @@ Steps as of 7/13/2016
 	Download: https://www.iterm2.com/downloads.html (download the stable release)
 	With admin access, move app into your Applications folder
   </li>
-  <li><strong>Change default shell to zsh over bash and set theme (I use Solarized Light).</strong>
-    Change the default shell to zsh:
-    <pre class="prettyprint lang-bsh">
+  <li><strong>Change default shell to zsh over bash and set theme (I use Solarized Dark).</strong>
+    <ul>
+      <li>Change the default shell to zsh:
+    <pre class="prettyprint lang-bsh">      
 chsh -s /bin/zsh    	
     </pre>
-    Set theme to Solarized Light:
+  </li>
+    <li>Set theme to Solarized Light:
     iTerm -> preferences -> profiles -> colors -> load presets
+    </li>
+  </ul>
   </li>
   <li><strong>Clone and install Prezto.</strong>
+    <ul>
+      <li>Copy and paste the following bash command:
     <pre class="prettyprint lang-bsh">
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${{'{'}}ZDOTDIR:-$HOME{{'}'}}/.zprezto" 
   setopt EXTENDED_GLOB
@@ -23,10 +29,14 @@ git clone --recursive https://github.com/sorin-ionescu/prezto.git "${{'{'}}ZDOTD
       ln -s "$rcfile" "${{'{'}}ZDOTDIR:-$HOME{{'}'}}/.${{'{'}}rcfile:t{{'}'}}"
     done
     </pre>
+    </li>
+  </ul>  
   </li>
   <li><strong>Install your favorite IDE (I use Atom).</strong>
-  Download dmg from https://atom.io/
-	With admin access, move app into your Applications folder
+    <ul>
+      <li>Download dmg from <a href="https://atom.io/">https://atom.io/</a></li>
+	    <li>With admin access, move app into your Applications folder</li>
+    </ul>
   </li>
   
   <li><strong>Modify ~/.zshrc file by copying the following lines into the end of the file.</strong>
@@ -43,14 +53,20 @@ export PATH=/Users/u060014/texlive/2016/bin/x86_64-darwin:$PATH
 if [[ -s "${{'{'}}ZDOTDIR:-$HOME{{'}'}}/.zprezto/init.zsh" ]]; then
   source "${{'{'}}ZDOTDIR:-$HOME{{'}'}}/.zprezto/init.zsh"
 fi
-
-#Applications
-alias sublime="open -a /Applications/Sublime.app"
   </pre>
 </li>
- 
- <li>Make sure you have sublime in your Applications folder and name the app Sublime.app 
-   (The default name is Sublime Text.app)
- </li>
  <li>Change the theme in ~/.zpreztorc to steeef (Line 95, at time of writing this doc)</li>
 </ol>
+
+Notes:
+<ul>
+  <li>If you are using sublime, make sure to add an alias in ~/.zshrc file:
+    <pre class="prettyprint lang-bsh">
+#Applications
+alias sublime="open -a /Applications/Sublime.app"
+    </pre>
+  </li>
+  <li>Also for sublime users, make sure you have sublime in your Applications folder and name the app Sublime.app 
+     (The default name is Sublime Text.app)
+   </li>
+</ul>
