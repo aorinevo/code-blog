@@ -19,6 +19,7 @@ import { D3Component } from './d3/d3.component';
 import { D3ExampleComponent } from './d3-example/d3-example.component';
 import { MeetingsComponent } from './meetings/meetings.component';
 import { MeetingsPageComponent } from './meetings-page/meetings-page.component';
+import { ItermPreztoIdeComponent } from './iterm-prezto-ide/iterm-prezto-ide.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { MeetingsPageComponent } from './meetings-page/meetings-page.component';
     RadioHbsComponentsExampleComponent,
     HomeComponent,    
     MeterComponent,    
-    LeftNavComponent, PageHeaderComponent, PageFooterComponent, PageNavbarComponent, FlyoutTabComponent, FlyoutTabExampleComponent, D3Component, D3ExampleComponent, MeetingsComponent, MeetingsPageComponent
+    LeftNavComponent, PageHeaderComponent, PageFooterComponent, PageNavbarComponent, FlyoutTabComponent, FlyoutTabExampleComponent, D3Component, D3ExampleComponent, MeetingsComponent, MeetingsPageComponent, ItermPreztoIdeComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +58,11 @@ import { MeetingsPageComponent } from './meetings-page/meetings-page.component';
       {
         path: 'meetings',
         component: MeetingsPageComponent
-      }            
+      },
+      {
+        path: 'iterm-prezto-ide',
+        component: ItermPreztoIdeComponent
+      }               
     ]) 
   ],
   providers: [],
