@@ -12,11 +12,10 @@
   <div class="col-xs-12">
     <h2>Technicals</h2>
     <p>
-      Meter animation is done using jquery but the component does not target elements in the DOM.  Instead,
+      Meter animation leverages jquery but not to direclty update elements in the DOM.  Instead,
       jquery takes an object containing the part and angle properties of the meter object.  The 
       call back function of the animate method modifies the appropriate svg properties 
-      (i.e. property d) that are bound to the meter component. The counter animation is handled in a 
-      similar way.
+      (i.e. property d) that are bound to the meter component. 
     </p>    
     <p>
       The meter component takes one input; an object of type Meter.
