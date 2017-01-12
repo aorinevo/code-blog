@@ -11,7 +11,7 @@ Steps as of 7/13/2016
     <ul>
       <li>Change the default shell to zsh:
     <pre class="prettyprint lang-bsh">      
-chsh -s /bin/zsh    	
+sudo chsh -s /bin/zsh    	
     </pre>
   </li>
     <li>Set theme to Dark Background:
@@ -30,17 +30,19 @@ git clone --recursive https://github.com/sorin-ionescu/prezto.git "${{'{'}}ZDOTD
     done
     </pre>
     </li>
+      <li>If you are getting errors, like file already exists, you can delete all files that start with .z from ~/</li>
   </ul>  
   </li>
   <li><strong>Install your favorite IDE (I use Atom).</strong>
     <ul>
       <li>Download dmg from <a href="https://atom.io/">https://atom.io/</a></li>
 	    <li>With admin access, move app into your Applications folder</li>
+      <li>In Atom, Atom -> Install Shell Commands</li>
     </ul>
   </li>
   
   <li><strong>Modify ~/.zshrc file by copying the following lines into the end of the file.</strong>
-
+  Note, if you are using ReappsJS to initialize your machine, you can skip this step.
   <pre class="prettyprint lang-bsh">
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home
 export MAVEN_HOME=/usr/local/Cellar/maven/3.3.9/libexec
