@@ -197,7 +197,26 @@ export class MeetingsPageComponent implements OnInit {
       "id": "ch4595352-ts9223370556304623807-rsvp-1641784139",
       "photo_url": "http://photos3.meetupstatic.com/photos/member/6/c/c/1/thumb_259467841.jpeg",
       "updated": "Wed Nov 30 18:55:52 EST 2016"
-    }
+    },
+    {
+      "member_id": "234860670",
+      "rsvp_comment": "",
+      "group_name": "NY Tech Meetup",
+      "item_type": "new_rsvp",
+      "link": "https://www.meetup.com/ny-tech/events/234860670/",
+      "published": "Wed Nov 30 18:55:52 EST 2016",
+      "rsvp_response": "Yes",
+      "title": "NY Tech Meetup: New RSVP",
+      "member_name": "Andy Saldaña",
+      "event_url": "https://www.meetup.com/ny-tech/events/234860670/",
+      "event_id": "234860670",
+      "group_id": "",
+      "event_date": "Tues Jan 10 19:00:00 EST 2017",
+      "event_name": "January 2017 NY Tech Meetup and Afterparty",
+      "id": "",
+      "photo_url": "https://www.meetup.com/ny-tech/",
+      "updated": "Tues Jan 10 19:00:00 EST 2017"
+    }    
   ];
 
   constructor() { }
