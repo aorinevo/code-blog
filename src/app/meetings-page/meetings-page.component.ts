@@ -216,12 +216,27 @@ export class MeetingsPageComponent implements OnInit {
       "id": "",
       "photo_url": "https://www.meetup.com/ny-tech/",
       "updated": "Tues Jan 10 19:00:00 EST 2017"
-    }    
+    },
+    {
+      "group_name": "AngularNYC Meetup",
+      "link": "https://www.meetup.com/AngularNYC/events/236822164/",
+      "title": "AngularNYC Meetup Jan 2016, Advanced @ngrx and Transitioning to ng2 apps",
+      "event_url": "https://www.meetup.com/AngularNYC/events/236822164/",
+      "event_id": "236822164",
+      "group_id": "",
+      "event_date": "Tues Jan 17 18:00:00 EST 2017",
+      "event_name": "AngularNYC Meetup Jan 2016, Advanced @ngrx and Transitioning to ng2 apps",
+      "photo_url": "https://a248.e.akamai.net/secure.meetupstatic.com/photos/event/d/0/a/e/global_454673422.jpeg"
+    }      
   ];
 
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit() {
+    this.meetings.sort(function(a,b){
+      return new Date(b.event_date) - new Date(a.event_date);
+    });
   }
 
 }
