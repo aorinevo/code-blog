@@ -235,7 +235,7 @@ export class MeetingsPageComponent implements OnInit {
 
   ngOnInit() {
     this.meetings.sort(function(a,b){
-      return new Date(b.event_date) - new Date(a.event_date);
+      return (new Date(b["event_date"])).getTime() - (new Date(a["event_date"])).getTime();
     });
   }
 
