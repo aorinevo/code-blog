@@ -1,0 +1,22 @@
+import { CodeBlogPage } from './app.po';
+
+<<<<<<< HEAD
+describe('code-blog App', () => {
+=======
+describe('code-blog App', function() {
+>>>>>>> origin/master
+  let page: CodeBlogPage;
+
+  beforeEach(() => {
+    page = new CodeBlogPage();
+  });
+
+  it('should display message saying app works', () => {
+    page.navigateTo();
+<<<<<<< HEAD
+    expect(page.getParagraphText()).toEqual('app works!');
+=======
+    expect(page.getParagraphText()).toEqual('ancb works!');
+>>>>>>> origin/master
+  });
+});
