@@ -3,6 +3,7 @@
 # compiled output
 /dist
 /tmp
+<<<<<<< HEAD
 /out-tsc
 
 # dependencies
@@ -10,11 +11,22 @@
 
 # IDEs and editors
 /.idea
+=======
+
+# dependencies
+/node_modules
+/bower_components
+
+# IDEs and editors
+/.idea
+/.vscode
+>>>>>>> origin/master
 .project
 .classpath
 .c9/
 *.launch
 .settings/
+<<<<<<< HEAD
 *.sublime-workspace
 
 # IDE - VSCode
@@ -23,11 +35,17 @@
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+=======
+>>>>>>> origin/master
 
 # misc
 /.sass-cache
 /connect.lock
+<<<<<<< HEAD
 /coverage
+=======
+/coverage/*
+>>>>>>> origin/master
 /libpeerconnection.log
 npm-debug.log
 testem.log
@@ -37,6 +55,12 @@ testem.log
 /e2e/*.js
 /e2e/*.map
 
+<<<<<<< HEAD
 # System Files
 .DS_Store
 Thumbs.db
+=======
+#System Files
+.DS_Store
+Thumbs.db
+>>>>>>> origin/master

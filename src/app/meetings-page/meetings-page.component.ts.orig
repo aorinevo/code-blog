@@ -199,6 +199,7 @@ export class MeetingsPageComponent implements OnInit {
       "updated": "Wed Nov 30 18:55:52 EST 2016"
     },
     {
+<<<<<<< HEAD
       "group_name": "NY Tech Meetup",
       "link": "https://www.meetup.com/ny-tech/events/234860670/",
       "title": "NY Tech Meetup: New RSVP",
@@ -207,6 +208,25 @@ export class MeetingsPageComponent implements OnInit {
       "event_date": "Tues Jan 10 19:00:00 EST 2017",
       "event_name": "January 2017 NY Tech Meetup and Afterparty",
       "photo_url": "https://www.meetup.com/ny-tech/",
+=======
+      "member_id": "234860670",
+      "rsvp_comment": "",
+      "group_name": "NY Tech Meetup",
+      "item_type": "new_rsvp",
+      "link": "https://www.meetup.com/ny-tech/events/234860670/",
+      "published": "Wed Nov 30 18:55:52 EST 2016",
+      "rsvp_response": "Yes",
+      "title": "NY Tech Meetup: New RSVP",
+      "member_name": "Andy Saldaña",
+      "event_url": "https://www.meetup.com/ny-tech/events/234860670/",
+      "event_id": "234860670",
+      "group_id": "",
+      "event_date": "Tues Jan 10 19:00:00 EST 2017",
+      "event_name": "January 2017 NY Tech Meetup and Afterparty",
+      "id": "",
+      "photo_url": "https://www.meetup.com/ny-tech/",
+      "updated": "Tues Jan 10 19:00:00 EST 2017"
+>>>>>>> origin/master
     },
     {
       "group_name": "AngularNYC Meetup",
@@ -214,6 +234,7 @@ export class MeetingsPageComponent implements OnInit {
       "title": "AngularNYC Meetup Jan 2016, Advanced @ngrx and Transitioning to ng2 apps",
       "event_url": "https://www.meetup.com/AngularNYC/events/236822164/",
       "event_id": "236822164",
+<<<<<<< HEAD
       "event_date": "Tues Jan 17 18:00:00 EST 2017",
       "event_name": "AngularNYC Meetup Jan 2016, Advanced @ngrx and Transitioning to ng2 apps",
       "photo_url": "https://a248.e.akamai.net/secure.meetupstatic.com/photos/event/d/0/a/e/global_454673422.jpeg"
@@ -257,6 +278,13 @@ export class MeetingsPageComponent implements OnInit {
       "photo_url": "https://a248.e.akamai.net/secure.meetupstatic.com/photos/event/3/7/7/a/global_199874202.jpeg",
       "updated": ""
     },
+=======
+      "group_id": "",
+      "event_date": "Tues Jan 17 18:00:00 EST 2017",
+      "event_name": "AngularNYC Meetup Jan 2016, Advanced @ngrx and Transitioning to ng2 apps",
+      "photo_url": "https://a248.e.akamai.net/secure.meetupstatic.com/photos/event/d/0/a/e/global_454673422.jpeg"
+    }      
+>>>>>>> origin/master
   ];
 
   constructor() { 

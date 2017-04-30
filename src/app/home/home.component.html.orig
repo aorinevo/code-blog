@@ -10,7 +10,12 @@
     <ul>
       <li>Backbone</li>
       <li>Marionette</li>
+<<<<<<< HEAD
       <li>AngularJS 4 (Originally Angular 1.x then Angular 2)</li>
+=======
+      <li>AngularJS 1.x</li>
+      <li>AngularJS 2</li>
+>>>>>>> origin/master
       <li>TypeScript</li>
       <li>ES6</li>
       <li>webpack</li>
@@ -18,6 +23,10 @@
       <li>underscore</li>
       <li>handlebars</li>      
     </ul>
+<<<<<<< HEAD
   The site itself is built in Angular 4.
+=======
+  The site itself is built in AngularJS 2.  For each example, the appropriate files are imported.
+>>>>>>> origin/master
   </div>
 </div>

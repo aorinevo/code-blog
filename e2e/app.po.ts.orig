@@ -6,6 +6,10 @@ export class CodeBlogPage {
   }
 
   getParagraphText() {
+<<<<<<< HEAD
     return element(by.css('app-root h1')).getText();
+=======
+    return element(by.css('ancb-root h1')).getText();
+>>>>>>> origin/master
   }
 }

@@ -46,6 +46,7 @@ export class Meter {
   constructor(config: any){
     console.log('test: ', CONFIG);
     CONFIG = _.extend( CONFIG, config );
+<<<<<<< HEAD
     // CONFIG.strokeWidth = CONFIG.radiusOuter - CONFIG.radiusInner;
     // CONFIG.radius = CONFIG.radiusOuter - CONFIG.strokeWidth / 2;
     // CONFIG.svgWidth = 2 * CONFIG.radiusOuter;
@@ -53,6 +54,15 @@ export class Meter {
     // CONFIG.x = CONFIG.radiusOuter;
     // CONFIG.y = CONFIG.radiusOuter;
     // CONFIG.meterAngle = CONFIG.part / CONFIG.whole * 360;
+=======
+    CONFIG.strokeWidth = CONFIG.radiusOuter - CONFIG.radiusInner;
+    CONFIG.radius = CONFIG.radiusOuter - CONFIG.strokeWidth / 2;
+    CONFIG.svgWidth = 2 * CONFIG.radiusOuter;
+    CONFIG.svgHeight = 2 * CONFIG.radiusOuter;
+    CONFIG.x = CONFIG.radiusOuter;
+    CONFIG.y = CONFIG.radiusOuter;
+    CONFIG.meterAngle = CONFIG.part / CONFIG.whole * 360;
+>>>>>>> origin/master
   }
   
   public CONFIG() {
@@ -72,6 +82,7 @@ export class Meter {
 
     //Set attributes on DOM elements
     setAttributes( svg, {
+<<<<<<< HEAD
         // width: CONFIG.svgWidth,
         // height: CONFIG.svgHeight
     } );
@@ -88,6 +99,24 @@ export class Meter {
         // fill: CONFIG.fill,
         // 'stroke-width': CONFIG.strokeWidth,
         // 'd': describeArc( CONFIG.x, CONFIG.y, CONFIG.radius, 0, 0 )
+=======
+        width: CONFIG.svgWidth,
+        height: CONFIG.svgHeight
+    } );
+    setAttributes( path2, {
+        id: CONFIG.svgId + '-2',
+        stroke: CONFIG.path2Stroke,
+        fill: CONFIG.fill,
+        'stroke-width': CONFIG.strokeWidth,
+        'd': describeArc( CONFIG.x, CONFIG.y, CONFIG.radius, 0, 359.9999 )
+    } );
+    setAttributes( path1, {
+        id: CONFIG.svgId + '-1',
+        stroke: CONFIG.path1Stroke,
+        fill: CONFIG.fill,
+        'stroke-width': CONFIG.strokeWidth,
+        'd': describeArc( CONFIG.x, CONFIG.y, CONFIG.radius, 0, 0 )
+>>>>>>> origin/master
     } );
     return svg;
   }    
