@@ -1,0 +1,45 @@
+<ancb-page-header mytitle="Flyout Panel Example"></ancb-page-header>
+
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Introduction</h2>
+    <p>
+      The flyout panel component displays a panel on the bottom-right side of the browser window.  
+      Initially the panel is closed.  When the user clicks the panel tab, the panel animates open.  
+      When user clicks the panel tab again, the panel animates closed.    
+    </p>
+  </div>
+  <div class="col-xs-12">
+    <h2>Technicals</h2>
+    <p>
+      Panel animation is done using css.  The open class animates the panel open in 1 second.  Similarly, 
+      when the open class is removed, the default css animates the panel closed in 1 second.
+    </p>
+    <div>
+      <p>
+      The flyout component takes two inputs:
+      </p>
+      <ul>
+        <li>A tabText property binding set to the desired tab text.</li>
+        <li>An ng-content input which passes all html content placed between
+          the ancb-flyout-panel directive.  The content is then dropped into the panel
+          content section.
+        </li>
+      </ul>
+      <p>
+        The flyout component emits a panelOpenChange event when the panel tab is clicked.  The example hooks into,
+        this event using the OnChanges lifecycle hook and changes the optional reanimate bound boolean property.
+        Thus, when the panel is opened the meter is animated.  Note the meter does not animate on close.
+      </p>
+      <p>
+        In the live example, we drop the meter component into the content section of the flyout panel component.
+      </p>      
+    </div>
+  </div>  
+</div>
+
+<ancb-flyout-tab [tabText]="tabText" (panelOpenChange)="test($event);">
+  <ancb-meter [meter]="meter" [reanimate]="reanimate">           
+    <div><span [style.color]="'white'">{{pointsCounter}}/{{meter.whole}}</span></div>
+  </ancb-meter>
+</ancb-flyout-tab>

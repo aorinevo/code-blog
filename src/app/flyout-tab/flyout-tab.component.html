@@ -1,0 +1,8 @@
+<div id="ancb-flyout-panel" class="row" [class.open]="panelOpen">
+  <div class="tab col-xs-2" (click)="togglePanel()">
+    <div class="text">{{tabText}}</div>
+  </div>
+  <div class="content col-xs-10">
+    <ng-content></ng-content>    
+  </div>
+</div>

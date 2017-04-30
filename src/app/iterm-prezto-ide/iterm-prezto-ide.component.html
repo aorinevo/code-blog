@@ -1,0 +1,83 @@
+<ancb-page-header mytitle="iTerm, Prezto, and an IDE"></ancb-page-header>
+Steps as of 7/13/2016 
+
+<ol> 
+  <li><strong>Install iterm2 and set preferences.</strong>
+
+	Download: https://www.iterm2.com/downloads.html (download the stable release)
+	With admin access, move app into your Applications folder
+  </li>
+  <li><strong>Change default shell to zsh over bash and set theme (I use Dark Background).</strong>
+    <ul>
+      <li>Change the default shell to zsh:
+    <pre class="prettyprint lang-bsh">      
+sudo chsh -s /bin/zsh    	
+    </pre>
+  </li>
+    <li>Set theme to Dark Background:
+    iTerm -> preferences -> profiles -> colors -> load presets
+    </li>
+  </ul>
+  </li>
+  <li><strong>Clone and install Prezto.</strong>
+    <ul>
+      <li>Copy and paste the following bash command:
+    <pre class="prettyprint lang-bsh">
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${{'{'}}ZDOTDIR:-$HOME{{'}'}}/.zprezto" 
+  setopt EXTENDED_GLOB
+    for rcfile in "${{'{'}}ZDOTDIR:-$HOME{{'}'}}"/.zprezto/runcoms/^README.md(.N); do
+      ln -s "$rcfile" "${{'{'}}ZDOTDIR:-$HOME{{'}'}}/.${{'{'}}rcfile:t{{'}'}}"
+    done
+    </pre>
+    </li>
+      <li>If you are getting errors, like file already exists, you can delete all files that start with .z from ~/</li>
+  </ul>  
+  </li>
+  <li><strong>Install your favorite IDE (I use Atom).</strong>
+    <ul>
+      <li>Option 1: Using brew cask
+        <ul>
+          <li><pre class="prettyprint lang-bsh">brew cask install atom</pre></li>
+        </ul>
+      </li>
+      <li>Option 2: Downloading binaries from atom.io
+        <ul>
+          <li>Download dmg from <a href="https://atom.io/">https://atom.io/</a></li>
+    	    <li>With admin access, move app into your Applications folder</li>
+          <li>In Atom, Atom -> Install Shell Commands</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  
+  <li><strong>Modify ~/.zshrc file by copying the following lines into the end of the file.</strong>
+  Note, if you are using ReappsJS to initialize your machine, you can skip this step.
+  <pre class="prettyprint lang-bsh">
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home
+export MAVEN_HOME=/usr/local/Cellar/maven/3.3.9/libexec
+export PATH=$MAVEN_HOME/bin:$JAVA_HOME/bin:$PATH
+export MAVEN_OPTS="-Xmx1024m -Xms1024m -XX:MaxPermSize=1162m"
+export M2_OPTS=$MAVEN_OPTS
+export PATH=/Users/u060014/texlive/2016/bin/x86_64-darwin:$PATH
+
+# Source Prezto.
+if [[ -s "${{'{'}}ZDOTDIR:-$HOME{{'}'}}/.zprezto/init.zsh" ]]; then
+  source "${{'{'}}ZDOTDIR:-$HOME{{'}'}}/.zprezto/init.zsh"
+fi
+  </pre>
+</li>
+ <li>Change the theme in ~/.zpreztorc to steeef (Line 95, at time of writing this doc)</li>
+</ol>
+
+Notes:
+<ul>
+  <li>If you are using sublime, make sure to add an alias in ~/.zshrc file:
+    <pre class="prettyprint lang-bsh">
+#Applications
+alias sublime="open -a /Applications/Sublime.app"
+    </pre>
+  </li>
+  <li>Also for sublime users, make sure you have sublime in your Applications folder and name the app Sublime.app 
+     (The default name is Sublime Text.app)
+   </li>
+</ul>
