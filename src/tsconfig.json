@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "",
+    "baseUrl": "/docs",
     "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
