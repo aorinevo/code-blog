@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "/docs",
+    "baseUrl": "/code-blog/docs",
     "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
